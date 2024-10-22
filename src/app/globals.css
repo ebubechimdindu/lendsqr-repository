@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.container {
+  @apply w-full h-full px-[10px] sm:px-[20px] max-w-[1312px] 2xl:max-w-[1712px] m-auto flex flex-col md:flex-row justify-between md:items-center;
+}
+
+.container-fluid{
+  @apply w-full h-full px-[20px] sm:px-[10px] max-w-[1312px] 2xl:max-w-[1712px] m-auto
+}
+
+.hide-scrollbar{
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
